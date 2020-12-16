@@ -11,9 +11,9 @@ let app = new Vue({
     timer: null
  },
 
- //  mounted() {
- //    this.startRotation();
- //  },
+  mounted() {
+    setInterval(this.nextImg, 3000); 
+ },
 
   methods: {
     nextImg() {
@@ -21,12 +21,6 @@ let app = new Vue({
     },
     prevImg() {
       this.index !== 0 ? this.index-- : this.index = this.srcImgs.length -1;
-    },
-    // startRotation() {
-    //   this.timer = setInterval(this.next, 3000);
-    // },    
-    // next() {
-    //   this.index += 1;
-    // },
+    }
   }
 })
